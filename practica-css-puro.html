@@ -16,8 +16,8 @@
    <li><a href="./index.html">
      <button class="btn-a-mano-gris">Home</button>
     </a></li>
-   <li><a href="pseudoclases">Pseudoclases</a></li>
-   <li><a href="#">#</a></li>
+   <li><a href="#pseudoclases">Pseudoclases</a></li>
+   <li><a href="#modal">Modal con <em>:target</em></a></li>
   </ul>
  </nav>
  <h1>Práctica con CSS Purito Purito</h1>
@@ -65,7 +65,7 @@
   </ul>
  </div>
 
- <article class="pseudoclases">
+ <article class="pseudoclases" id="pseudoclases">
   <h2>Pseudo - clases</h2>
   <form class="form-pseudoclases">
    <input type="text" name="nombre" placeholder="Escribe tu nombre" required><br>
@@ -115,8 +115,25 @@
   <a href="https://necolas.github.io/normalize.css/" rel="norreferer" target="_blank">normalize.css</a>
  </article>
 
- <br><br><br><br><br><br><br><br><br>
-
+ <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ <!-- Modal con :target -->
+ <div class="modal-fondo" id="modal">
+  <div class="modal">
+   <img src="https://placeimg.com/300/250/people" alt="Gente">
+   <h3>Ventana Modal con <em>:target</em></h3>
+   <p>Esta ventana Modal funciona sin JavaScript, solo con CSS y la pseudoclase <em>:target</em>. Lorem ipsum dolor sit
+    amet consectetur, adipisicing elit. Laborum, quam tempora. Aliquid voluptatibus est non. Deserunt excepturi debitis
+    perspiciatis, nostrum error ab accusamus totam, a fugiat magni itaque, facere eius! Lorem ipsum dolor sit amet
+    consectetur adipisicing elit. Repellendus unde corrupti autem sapiente! Eligendi iure voluptas iste sit mollitia,
+    repudiandae enim quas, corrupti nostrum tempore odit reprehenderit facere perspiciatis porro?. Lorem ipsum dolor sit
+    amet, consectetur adipisicing elit. Illum voluptatibus laudantium, perspiciatis, voluptatem sunt aliquid ipsum
+    cupiditate, facere nostrum obcaecati quod aut asperiores quasi reprehenderit incidunt! Eius nostrum fugit et? Lorem
+    ipsum dolor sit amet consectetur adipisicing elit. Explicabo quos dolores provident odit illo consectetur nisi
+    distinctio error excepturi, quae ex voluptatum, reiciendis temporibus quidem recusandae impedit, autem rerum
+    exercitationem.</p>
+   <a href="#"><button class="btn-modal">CERRAR</button></a>
+  </div>
+ </div>
 
 </body>
 
