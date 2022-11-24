@@ -8,11 +8,15 @@
  <!-- Bootstrap -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+ <!-- Bootstrap Icons -->
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+
  <title>Práctica con los componentes de Bootstrap</title>
  <style>
   body {
    background-color: #111;
-   color: #dd3
+   color: #dd3;
+   overflow-x: hidden;
   }
 
   .navbar {
@@ -24,10 +28,77 @@
    backdrop-filter: blur(6px);
    background-color: rgba(34, 34, 34, 0.5);
    width: 100vw;
+   z-index: 20;
   }
 
   .card-body {
    background-color: #222;
+  }
+
+  .tab-content {
+   position: fixed;
+   display: none;
+   justify-content: center;
+   align-items: center;
+   z-index: 11;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   backdrop-filter: blur(2px);
+  }
+
+  .tab-pane {
+   width: 25rem;
+   height: 50vh;
+   background-color: #222;
+   border: 2px solid #555;
+   border-radius: 1rem;
+  }
+
+  .tab-pane p {
+   padding: 1.5rem;
+  }
+
+  .tab-pane button {
+   margin: 0 40%;
+  }
+
+  .tab-content:target {
+   display: flex;
+  }
+
+  .iconos-bs {
+   margin-top: 5rem;
+   text-align: center;
+  }
+
+  .iconos-bs figure {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem;
+   margin: .5rem .5rem;
+   width: 15rem;
+   height: 17rem;
+   background-color: #999;
+   border-radius: .5rem;
+   box-shadow: 4px 3px 7px #777;
+  }
+
+  .iconos-bs figure *:not(i) {
+   color: #000;
+  }
+
+  i {
+   font-size: 9rem;
+  }
+
+  #espacio1 img,
+  #espacio2 img,
+  #espacio3 {
+   max-width: 90%;
+
   }
  </style>
 </head>
@@ -36,20 +107,73 @@
 
 
  <!-- Pestañas tabs -->
- <ul class="nav nav-tabs">
-  <li class="nav-item">
-   <a class="nav-link active" aria-current="page" href="#espacio1">Active 1</a>
+ <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+   <a href="./index.html">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button"
+     role="tab" aria-controls="home-tab-pane" aria-selected="true">Volver a Home</button>
+   </a>
   </li>
-  <li class="nav-item">
-   <a class="nav-link" href="#espacio2">Link 2</a>
+  <li class="nav-item" role="presentation">
+   <a href="#myTabContent">
+    <button class="nav-link" id="espacio1-tab" data-bs-toggle="tab" data-bs-target="#espacio1-tab-pane" type="button"
+     role="tab" aria-controls="espacio1-tab-pane" aria-selected="false">Espacio 1</button>
+   </a>
   </li>
-  <li class="nav-item">
-   <a class="nav-link" href="#espacio3">Link 3</a>
+  <li class="nav-item" role="presentation">
+   <a href="#myTabContent">
+    <button class="nav-link" id="espacio2-tab" data-bs-toggle="tab" data-bs-target="#espacio2-tab-pane" type="button"
+     role="tab" aria-controls="espacio2-tab-pane" aria-selected="false">Espacio 2</button>
+   </a>
   </li>
-  <li class="nav-item">
-   <a class="nav-link disabled">Disabled</a>
+  <li class="nav-item" role="presentation">
+   <a href="#myTabContent">
+    <button class="nav-link" id="espacio3-tab" data-bs-toggle="tab" data-bs-target="#espacio3-tab-pane" type="button"
+     role="tab" aria-controls="espacio3-tab-pane" aria-selected="false">Espacio 3</button>
+   </a>
+  </li>
+  <li class="nav-item" role="presentation">
+   <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button"
+    role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
   </li>
  </ul>
+ <div class="tab-content" id="myTabContent">
+  <!--       CONTENIDO DE home-tab desactivado 
+   <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+   <p>Texto de ARRIBA ! Home tab. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, voluptatum
+    blanditiis laborum
+    doloremque provident accusamus quod aperiam. Rem perspiciatis reprehenderit architecto sapiente veniam! Expedita
+    officiis perspiciatis minima deleniti, doloremque a?</p>
+  </div> -->
+  <div class="tab-pane fade" id="espacio1-tab-pane" role="tabpanel" aria-labelledby="espacio1-tab" tabindex="0">
+   <p>Texto
+    ESPACIO 1 exprofile. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolor neque odio eligendi?
+    Perferendis reiciendis distinctio, deserunt impedit aspernatur aliquid cumque quas similique incidunt, eligendi
+    saepe
+    quam consequuntur doloremque iure? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus quas
+    temporibus, provident minima illum facilis eligendi est ratione necessitatibus asperiores explicabo reiciendis nisi
+    a! Deleniti, ipsam! Libero hic iusto porro!</p>
+   <a href="#"><button class="btn btn-outline-light">CERRAR</button></a>
+  </div>
+  <div class="tab-pane fade" id="espacio2-tab-pane" role="tabpanel" aria-labelledby="espacio2-tab" tabindex="0">
+   <p>texto
+    ESPACIO 2 ex contact. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, ducimus eum quos et
+    nostrum unde tempora culpa ab suscipit voluptatem, vel amet, voluptate sed fugiat ut eius asperiores voluptas odio?
+   </p>
+   <a href="#"><button class="btn btn-outline-light">CERRAR</button></a>
+  </div>
+  <div class="tab-pane fade" id="espacio3-tab-pane" role="tabpanel" aria-labelledby="espacio3-tab" tabindex="0">
+   <p>texto
+    ESPACIO 3 ex contact. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, ducimus eum quos et
+    nostrum unde tempora culpa ab suscipit voluptatem, vel amet, voluptate sed fugiat ut eius asperiores voluptas odio?
+   </p>
+   <a href="#"><button class="btn btn-outline-light">CERRAR</button></a>
+  </div>
+  <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...
+  </div>
+ </div>
+
+
 
  <!-- Nav bar dark -->
  <nav class="navbar navbar-dark bg-dark fixed-top">
@@ -96,16 +220,20 @@
   </div>
  </nav>
 
+
+
+
  <!-- Contenidos y Secciones con #ids para las pestañas -->
- <div class="container">
+ <div class="d-flex flex-column align-items-center text-center">
 
   <div id="espacio1">
    <br><br><br><br><br><br><br><br>
-   <h2>Espacio 1</h2><img src="https://placeimg.com/500/300/people" alt="gente">
+   <h2>Espacio 1</h2><img src="https://placeimg.com/1000/1000/people" alt="gente">
   </div>
   <br><br><br><br><br><br><br>
+
   <div id="espacio2">
-   <h2>Espacio 2</h2><img src="https://placeimg.com/500/300/nature" alt="naturaleza">
+   <h2>Espacio 2</h2><img src="https://placeimg.com/1000/1000/nature" alt="naturaleza">
   </div>
   <br><br><br><br><br><br><br>
 
@@ -129,7 +257,7 @@
       <span class="placeholder col-6 bg-secondary"></span>
       <span class="placeholder col-8 bg-secondary"></span>
      </p>
-     <img src="https://placeimg.com/500/300/arch" class="card-img-top" alt="arquitectura"><br><br>
+     <img src="https://placeimg.com/1000/1000/arch" class="card-img-top" alt="arquitectura"><br><br>
      <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
      <br><br>
     </div>
@@ -153,9 +281,44 @@
 
  </div>
 
+ <!-- Iconos -->
+ <div class="container iconos-bs">
+  <h2>Iconos de BS</h2>
+  <img src="./assets/icons-hero.png" alt="logo bootstrap icons">
+
+  <div class="d-flex flex-wrap flex-xl-nowrap justify-content-evenly tarjetas-iconos">
+   <figure>
+    <svg xmlns="http://www.w3.org/2000/svg" width="12rem" height="12rem" fill="currentColor" class="bi bi-git"
+     viewBox="0 0 16 16">
+     <path
+      d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.031 1.031 0 0 0 0-1.457" />
+    </svg>
+    <figcaption>Inserto como código SVG</figcaption>
+   </figure>
+   <figure>
+    <i class="bi bi-radioactive"></i>
+    <figcaption>Inserto con código Icon FONT</figcaption>
+   </figure>
+   <figure>
+    <i class="bi bi-airplane" style="color: #56c"></i>
+    <figcaption>Inserto con código Icon FONT</figcaption>
+   </figure>
+   <figure>
+    <i class="bi bi-whatsapp" style="color: #193"></i>
+    <figcaption>Inserto con código Icon FONT</figcaption>
+   </figure>
+   <figure>
+    <i class="bi bi-tiktok" style="color: #b1f"></i>
+    <figcaption>Inserto con código Icon FONT</figcaption>
+   </figure>
+
+
+  </div>
+ </div>
 
 
 
+ <br><br><br><br><br><br><br><br><br>
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
