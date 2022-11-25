@@ -1,0 +1,24 @@
+:root {
+  --main-color: #0078d6;
+  --second-color: #d6094d;
+  --thirt-color: #004b74;
+  --forth-color: #fff;
+  --fifth-color: #333333;
+  --back-color: #222;
+}
+body {
+  color: var(--forth-color);
+  background-color: var(--back-color);
+}
+
+/* Barra Navegacion */
+.navbar {
+  padding: 0.5rem 0 1rem 0;
+  background-color: var(--fifth-color);
+}
+
+@media screen and (max-width: 576px) {
+  .navbar-brand {
+    display: none;
+  }
+}
