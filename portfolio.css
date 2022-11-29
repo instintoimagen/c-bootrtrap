@@ -3,22 +3,235 @@
   --second-color: #d6094d;
   --thirt-color: #004b74;
   --forth-color: #fff;
+  --forth-color-trans: #ffffff50;
   --fifth-color: #333333;
+  --fifth-color-trans: #33333350;
+  --sixth-color: #bcd;
   --back-color: #222;
+  --font-main: "JetBrains Mono", monospace;
+  --font-title: "M PLUS 1 Code", sans-serif;
 }
 body {
   color: var(--forth-color);
+  font-family: var(--font-main);
   background-color: var(--back-color);
+}
+
+/* Estilos generales */
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.seccion-clara {
+  color: var(--fifth-color);
+  background-color: var(--forth-color);
+}
+.seccion-oscura {
+  color: var(--forth-color);
+  background-color: var(--fifth-color);
+}
+.seccion-titulo {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-title);
+}
+.seccion-descripcion {
+  font-size: 1.2rem;
+  color: var(--fifth-color);
 }
 
 /* Barra Navegacion */
 .navbar {
   padding: 0.5rem 0 1rem 0;
   background-color: var(--fifth-color);
+  font-size: 0.9rem;
 }
 
-@media screen and (max-width: 576px) {
+/*  Hero Section  */
+.hero {
+  background-color: var(--fifth-color);
+  /*   min-width: 450px; */
+  text-align: center;
+  padding: 0;
+}
+.hero-principal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./assets/dev-plant.jpg);
+  height: 45vh;
+  width: 100%;
+  background-position: 75% 45%;
+  background-repeat: no-repeat;
+}
+.hero-principal h1 {
+  font-size: 2rem;
+  font-family: var(--font-title);
+}
+.hero-principal h2 {
+  font-size: 1rem;
+  color: var(--sixth-color);
+}
+.hero-title-background {
+  background-color: var(--fifth-color-trans);
+  backdrop-filter: blur(2px);
+  padding: 0.4rem 3rem 0;
+  border: 0.3px solid rgba(136, 144, 151, 0.24);
+  border-radius: 0.75rem;
+  box-shadow: 4px 5px 3px #7a7a7a35;
+}
+.hero-foto-perfil {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: 50% -80%;
+  margin: 1rem;
+}
+.btn-descargar-cv {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--forth-color);
+  background-color: var(--fifth-color-trans);
+}
+.hero-inferior-imagen {
+  max-height: 300px;
+}
+
+/* Sobre mi Section */
+.sobre-mi {
+  min-height: 50vh;
+  padding: 5rem 1rem;
+}
+.sobre-mi .contenedor {
+  max-width: 75vw;
+}
+
+/* Experiencia Section */
+.experiencia {
+  padding: 3rem;
+}
+.experiencia-titulo {
+  font-size: 1.4rem;
+  margin: 1.5rem 0 0.5rem;
+}
+.badges-contenedor {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.badge {
+  margin: 0.3rem 0.1rem;
+}
+.experiencia i {
+  font-size: 2.2rem;
+  color: var(--main-color);
+  background-color: var(--sixth-color);
+  border-radius: 50%;
+  padding: 0.5rem 1.1rem;
+}
+.experiencia .columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease-in;
+}
+.experiencia .columna:hover {
+  background-color: #222;
+}
+
+/* Proyectos Section */
+.proyectos-recientes {
+  padding: 3rem;
+}
+.proyectos-recientes img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.7rem;
+  transition: all 0.2s ease;
+}
+.proyectos-contenedor {
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+.proyecto {
+  position: relative;
+}
+.overlay {
+  transition: all 0.2s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay p {
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.proyecto:hover img {
+  opacity: 0.3;
+}
+.proyecto:hover .overlay {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+  .hero-principal {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 30vh;
+    background-position: 100% 45%;
+  }
+  .title-y-btn {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /*   reemplazado por max-heigth fuera del @media
+.hero-inferior-imagen {
+    max-width: 600px;
+  } */
+}
+@media screen and (max-width: 575px) {
+  /* Ocultar logo en menú hamburguesa */
   .navbar-brand {
     display: none;
+  }
+  .hero-foto-perfil {
+    width: 125px;
+    height: 125px;
+    margin: 0.7rem;
+  }
+  .hero-principal h1 {
+    font-size: 1.4rem;
+  }
+  .hero-principal h2 {
+    font-size: 1.2rem;
+  }
+  .hero-title-background {
+    padding: 0.2rem 2rem 0;
+  }
+}
+@media screen and (max-width: 360px) {
+  .hero-principal h1 {
+    font-size: 0.9rem;
+  }
+  .hero-principal h2 {
+    font-size: 0.8rem;
+  }
+  .hero-title-background {
+    padding: 0.2rem 2rem 0;
   }
 }
