@@ -42,6 +42,10 @@ section {
   font-size: 1.2rem;
   color: var(--fifth-color);
 }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 
 /* Barra Navegacion */
 .navbar {
@@ -96,6 +100,7 @@ section {
   font-size: 0.8rem;
   color: var(--forth-color);
   background-color: var(--fifth-color-trans);
+  --bs-btn-active-bg: #a1a8af;
 }
 .hero-inferior-imagen {
   max-height: 300px;
@@ -181,6 +186,10 @@ section {
 }
 .proyecto:hover .overlay {
   opacity: 1;
+}
+.overlay i {
+  font-size: 2rem;
+  margin: 2rem;
 }
 
 @media screen and (min-width: 768px) {
