@@ -43,6 +43,7 @@ section {
 .seccion-descripcion {
   font-size: 1.2rem;
   color: var(--fifth-color);
+  padding: 0 1rem;
 }
 a {
   color: inherit;
@@ -194,9 +195,10 @@ a {
   margin: 0.5rem;
 }
 
-/* Articulos */
+/* Articulos Section */
 
 .card {
+  max-width: 80%;
   --bs-card-bg: var(--fifth-color);
 }
 .card li:hover {
@@ -204,6 +206,34 @@ a {
 }
 .btn-ver-mas-art {
   margin-top: 2rem;
+}
+
+/* Testimonios Section */
+.testimonios .carousel {
+  max-width: 90%;
+}
+.carousel-item .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.testimonios-img {
+  height: 150px;
+  width: 150px;
+  margin: 0.7rem 2rem;
+}
+.testimonios-texto {
+  max-width: 75%;
+}
+.testimonios-info {
+  font-weight: bold;
+  text-align: center;
+}
+.carousel-indicators {
+  bottom: -1.5rem;
 }
 
 @media screen and (min-width: 768px) {

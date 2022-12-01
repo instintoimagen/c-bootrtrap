@@ -262,7 +262,7 @@
  <section class="articulos seccion-oscura justify-content-start ">
   <h2 class="seccion-titulo">Artículos</h2>
 
-  <div class="card" style="width: 18rem;">
+  <div class="card">
    <div class="card-header">
     Más recientes
    </div>
@@ -284,7 +284,79 @@
     </button>
    </a>
   </div>
+ </section>
 
+ <!-- Testimonios Section -->
+
+ <section class="testimonios seccion-clara">
+  <h2 class="seccion-titulo">Testimonios</h2>
+  <h3 class="seccion-descripcion">Estos son algunos testimonios de mis clientes</h3>
+  <!-- Carousel -->
+  <div id="testimonios-carousel" class="carousel carousel-dark slide" data-bs-ride="true">
+   <!-- indicadores -->
+   <div class="carousel-indicators">
+    <button type="button" data-bs-target="#testimonios-carousel" data-bs-slide-to="0" class="active" aria-current="true"
+     aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#testimonios-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#testimonios-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+   </div>
+   <!-- Imágenes de las slides -->
+   <div class="carousel-inner">
+    <div class="carousel-item active">
+     <div class="container">
+      <img class="testimonios-img rounded-circle" src="./assets/cliente1.svg" alt="Cliente 1 Juan">
+      <p class="testimonios-texto">Conozco a Sergio en su rol de director de programas de televisión con equipos a cargo
+       y se encarga de promover lo mejor de cada uno de sus miembros. Potencia el trabajo de cada integrante del equipo
+       tanto técnico como de las personas que
+       salen al aire y genera un ambiente de trabajo agradable. Responde bien al trabajo bajo presión y es responsable.
+      </p>
+      <div class="testimonios-info">
+       <p class="cliente">Juan</p>
+       <p class="cargo">Manager de proyectos</p>
+      </div>
+     </div>
+    </div>
+    <div class="carousel-item">
+     <div class="container">
+      <img class="testimonios-img rounded-circle" src="./assets/cliente2.svg" alt="Cliente 2 Anna">
+      <p class="testimonios-texto">Conozco a Sergio en su rol de director de programas de televisión con equipos a cargo
+       y se encarga de promover lo mejor de cada uno de sus miembros. Potencia el trabajo de cada integrante del equipo
+       tanto técnico como de las personas que
+       salen al aire y genera un ambiente de trabajo agradable. Responde bien al trabajo bajo presión y es responsable.
+      </p>
+      <div class="testimonios-info">
+       <p class="cliente">Anna</p>
+       <p class="cargo">Product Owner</p>
+      </div>
+     </div>
+    </div>
+    <div class="carousel-item">
+     <div class="container">
+      <img class="testimonios-img rounded-circle" src="./assets/cliente3.svg" alt="Cliente 3 Estanislao">
+      <p class="testimonios-texto">Conozco a Sergio en su rol de director de programas de televisión con equipos a cargo
+       y se encarga de promover lo mejor de cada uno de sus miembros. Potencia el trabajo de cada integrante del equipo
+       tanto técnico como de las personas que
+       salen al aire y genera un ambiente de trabajo agradable. Responde bien al trabajo bajo presión y es responsable.
+      </p>
+      <div class="testimonios-info">
+       <p class="cliente">Estanislao</p>
+       <p class="cargo">Scrum Master</p>
+      </div>
+     </div>
+    </div>
+
+
+   </div>
+   <!-- controles -->
+   <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Anterior</span>
+   </button>
+   <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Siguiente</span>
+   </button>
+  </div>
 
  </section>
 
