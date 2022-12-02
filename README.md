@@ -1,4 +1,4 @@
-# Portafolio Adaptable (Responsive) con Bootstrap 5
+# Portfolio Adaptable (Responsive) con Bootstrap 5
 
 #### Este proyecto creado para proporcionar un recurso rápido y adaptable a las necesidades estéticas y de diseño gráfico de cada uno de los posibles clientes, tanto de personas como de insituciones para las cuales se trabaje. Es perfectamente adaptable a dispositivos de distintos tamaños, otorgando una experiencia de usuario súmamente satisfactoria.
 
@@ -16,3 +16,5 @@
 - Javascript (dentro del CDN de Bootstrap)
 
 ##### Además, se incluyeron Google Fonts para personalizar la fuente y Bootstrap icons para incorporar íconos como flechas y logos de redes sociales populares.
+
+### Podés verlo en vivo en este link: https://instintoimagen.github.io/c-bootrtrap/
