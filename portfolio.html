@@ -20,7 +20,8 @@
  <!-- Google Fonts -->
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=M+PLUS+1+Code&display=swap"
+ <link
+  href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=M+PLUS+1+Code&family=Quicksand:wght@500&display=swap"
   rel="stylesheet">
 
  <link rel="stylesheet" href="./portfolio.css">
@@ -31,7 +32,7 @@
 
 <body>
  <!-- Barra Navegacion -->
- <nav class="navbar navbar-expand-sm navbar-dark">
+ <nav class="navbar navbar-expand-md navbar-dark">
   <div class="container-fluid">
    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,16 +45,22 @@
 
     <ul class="navbar-nav d-flex justify-content-center align-items-center ">
      <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Proyectos</a>
+      <a class="nav-link" aria-current="page" href="#sobre-mi">Sobre mi</a>
      </li>
      <li class="nav-item">
-      <a class="nav-link" href="#">Testimonios</a>
+      <a class="nav-link" aria-current="page" href="#experiencia">Experiencia</a>
      </li>
      <li class="nav-item">
-      <a class="nav-link" aria-current="page" href="#">Sobre mi</a>
+      <a class="nav-link " aria-current="page" href="#proyectos">Proyectos</a>
      </li>
      <li class="nav-item">
-      <a class="nav-link" href="#">Contacto</a>
+      <a class="nav-link " aria-current="page" href="#articulos">Artículos</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#testimonios">Testimonios</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link" href="#contacto">Contacto</a>
      </li>
     </ul>
    </div>
@@ -85,7 +92,7 @@
 
  <!-- Sobre Mi  Section -->
 
- <section class="sobre-mi seccion-clara">
+ <section id="sobre-mi" class="sobre-mi seccion-clara">
   <div class="contenedor">
    <h2 class="seccion-titulo">Sobre mi</h2>
    <p class="seccion-texto">Entusiasta de la tecnología desde siempre, soy un autodidacta nato, y me estoy
@@ -101,7 +108,7 @@
 
 
  <!-- Experiencia Section -->
- <section class="experiencia seccion-oscura">
+ <section id="experiencia" class="experiencia seccion-oscura">
   <div class="container text-center">
    <div class="row">
     <!-- Desarrollo web -->
@@ -148,7 +155,7 @@
  </section>
 
  <!--  Proyectos  Section -->
- <section class="proyectos-recientes seccion-clara d-flex flex-column">
+ <section id="proyectos" class="proyectos-recientes seccion-clara d-flex flex-column">
   <h2 class="seccion-titulo">Mis Proyectos</h2>
   <h3 class="seccion-descripcion">Estos son algunos proyectos desarrollados recientemente</h3>
   <!-- Galeria de Proyectos -->
@@ -259,7 +266,7 @@
  </section>
 
  <!-- Articulos -->
- <section class="articulos seccion-oscura justify-content-start ">
+ <section id="articulos" class="articulos seccion-oscura justify-content-start ">
   <h2 class="seccion-titulo">Artículos</h2>
 
   <div class="card">
@@ -288,7 +295,7 @@
 
  <!-- Testimonios Section -->
 
- <section class="testimonios seccion-clara">
+ <section id="testimonios" class="testimonios seccion-clara">
   <h2 class="seccion-titulo">Testimonios</h2>
   <h3 class="seccion-descripcion">Estos son algunos testimonios de mis clientes</h3>
   <!-- Carousel -->
@@ -361,12 +368,48 @@
  </section>
 
 
- <br><br><br><br><br><br><br>
+ <!--  Contacto Section  -->
+ <section id="contacto" class="contacto">
+  <div class="container">
+   <div class="container text-center rectangulo-contacto d-flex justify-content-evenly">
+    <div class="row">
+     <div class="col-12 col-md-4 seccion-titulo">Hablemos!</div>
+     <div class="col-12 col-md-4 descripcion">
+      Contáctame para iniciar tu proyecto de desarrollo web, y haré que tu visión se haga realidad
+     </div>
+     <div class="col-12 col-md-4">
+      <a href="mailto:hola@sergioortega.com.ar">
+       <button type="button">Contacto <i class="bi bi-envelope-check-fill"></i></button>
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
 
 
+ <!-- Footer Section  -->
+ <footer class="d-flex flex-column justify-content-center align-items-center">
+  <img class="footer-logo" src="./assets/aplitivo-horizontal-oscuro.png" alt=" icono blanco">
+  <p class="footer-texto text-center">Aprendo y creo todos los días. <br>Creemos un proyecto juntos</p>
+  <div class="iconos-redes-sociales d-flex flex-wrap align-items-center justify-content-center">
+   <a href="https://twitter.com/sergiofoto" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-twitter"></i>
+   </a>
+   <a href="https://instagram.com/sergio.instintoimagen" target="_blank" rel="noopener noreferrer">
+    <i class="bi bi-instagram"></i>
+   </a>
+   <a href="https://linkedin.com/in/sergioortegadev" target="_blank" rel="noopener noreferrer"><i
+     class="bi bi-linkedin"></i></a>
+   <a href="https://github.com/instintoimagen" target="_blank" rel="noopener noreferrer"><i
+     class="bi bi-github"></i></a>
+   <a href="mailto:hola@sergioortega.com.ar" target="_blank" rel="noopener noreferrer"><i
+     class="bi bi-envelope"></i></a>
+  </div>
 
+  <div class="derechos-de-autor">Creado por Sergio Ortega (2022) &#169;</div>
 
-
+ </footer>
 
 
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
